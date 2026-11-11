@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PromptHub — A Library of AI Prompting Techniques</title>
+<meta name="description" content="Browse practical AI prompting techniques with copy-ready templates, before/after examples and sample results.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#" aria-label="PromptHub home"><span class="logo">✦</span> PromptHub</a>
+    <button id="themeBtn" class="ghost" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <h1>Better prompts, <em>faster</em>.</h1>
+  <p>A hands-on library of prompting techniques. Every entry has a copy-ready template, a before/after comparison and a sample result.</p>
+  <div class="search">
+    <input id="q" type="search" placeholder="Search techniques, e.g. “JSON”, “critique”, “headline”…" aria-label="Search prompts" autocomplete="off">
+  </div>
+</section>
+
+<section class="wrap filters">
+  <div id="cats" class="chips" role="group" aria-label="Categories"></div>
+  <div class="row">
+    <div id="levels" class="chips small" role="group" aria-label="Level"></div>
+    <label class="fav-toggle"><input type="checkbox" id="favOnly"> ♥ Saved only</label>
+    <span id="count" class="count" aria-live="polite"></span>
+  </div>
+</section>
+
+<main class="wrap">
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>No techniques match. Try a different search or clear the filters.</p>
+</main>
+
+<footer class="wrap foot">PromptHub · Templates are starting points. Adapt them to your model and task.</footer>
+
+<div id="modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="sheet">
+    <button id="mClose" class="close" aria-label="Close">×</button>
+    <div id="mBody"></div>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
